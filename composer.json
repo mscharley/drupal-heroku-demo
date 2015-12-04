@@ -12,10 +12,11 @@
     "ext-mysql": "*",
     "ext-pcre": "*",
     "ext-pdo": "*",
+    "ext-pdo_mysql": "*",
+    "ext-pdo_sqlite": "*",
     "ext-session": "*",
     "ext-SimpleXML": "*",
     "ext-SPL": "*",
-    "ext-sqlite3": "*",
     "ext-tokenizer": "*",
     "ext-xml": "*",
     "monolog/monolog": "~1.7"
