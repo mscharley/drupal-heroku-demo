@@ -1,25 +1,22 @@
 <?php
 
-require('../vendor/autoload.php');
+/**
+ * @file
+ * The PHP page that serves all page requests on a Drupal installation.
+ *
+ * All Drupal code is released under the GNU General Public License.
+ * See COPYRIGHT.txt and LICENSE.txt files in the "core" directory.
+ */
 
-$app = new Silex\Application();
-$app['debug'] = true;
+use Drupal\Core\DrupalKernel;
+use Symfony\Component\HttpFoundation\Request;
 
-// Register the monolog logging service
-$app->register(new Silex\Provider\MonologServiceProvider(), array(
-  'monolog.logfile' => 'php://stderr',
-));
+$autoloader = require_once 'autoload.php';
 
-// Register view rendering
-$app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/views',
-));
+$kernel = new DrupalKernel('prod', $autoloader);
 
-// Our web handlers
+$request = Request::createFromGlobals();
+$response = $kernel->handle($request);
+$response->send();
 
-$app->get('/', function() use($app) {
-  $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('index.twig');
-});
-
-$app->run();
+$kernel->terminate($request, $response);
