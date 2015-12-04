@@ -72,16 +72,18 @@ AddEncoding gzip svgz
   # Migrate Heroku's X-Forwarded headers to the trusted places that Drupal checks
   # for them. We do this here because the installer can't run with a settings file
   # in place and we can't override the settings from the profile as a full
-  # bootstrap has already occured at that point.
-  RewriteCond %{REMOTE_ADDR} ^10\.
-  RewriteRule ^ - [E=REMOTE_ADDR:%{HTTP:X-Forwarded-For}]
-  RewriteCond %{REMOTE_ADDR} ^10\.
-  RewriteRule ^ - [E=REMOTE_PORT:%{HTTP:X-Forwarded-Port}]
-  RewriteCond %{REMOTE_ADDR} ^10\.
-  RewriteRule ^ - [E=REQUEST_SCHEME:%{HTTP:X-Forwarded-Proto}]
-  RewriteCond %{REMOTE_ADDR} ^10\.
-  RewriteCond %{HTTP_X_FORWARDED_PROTO} ^https$
+  # bootstrap has already occured at that point. It also appears that Heroku uses
+  # a dynamic set of reverse proxies so we can'r really 'trust' anyone explicitly
+  # like Drupal wants us to in the settings file.
+  #RewriteCond %{REMOTE_ADDR} ^10\.
+  RewriteRule ^ - [E=REMOTE_PORT:%{HTTP_X_FORWARDED_PORT}]
+  #RewriteCond %{REMOTE_ADDR} ^10\.
+  RewriteRule ^ - [E=REQUEST_SCHEME:%{HTTP_X_FORWARDED_PROTO}]
+  #RewriteCond %{REMOTE_ADDR} ^10\.
+  RewriteCond %{HTTP_X_FORWARDED_PROTO} =https
   RewriteRule ^ - [E=HTTPS:on]
+  #RewriteCond %{REMOTE_ADDR} ^10\.
+  RewriteRule ^ - [E=REMOTE_ADDR:%{HTTP_X_FORWARDED_FOR}]
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
