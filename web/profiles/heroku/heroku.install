@@ -3,7 +3,7 @@
  * @file
  * Install, update and uninstall functions for the Heroku installation profile.
  */
-
+print 'Hello from the .install.<br/>';
 /**
  * Implements hook_install().
  *

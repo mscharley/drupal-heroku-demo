@@ -5,6 +5,8 @@
  * This provides integrations with the Heroku environment.
  */
 
+print 'Hello from the .profile.<br/>';
+
 $settings['reverse_proxy'] = TRUE;
 $settings['reverse_proxy_address'] = [];
 
