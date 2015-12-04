@@ -12,7 +12,7 @@
  */
 
 // Include our Composer libraries.
-require __DIR__ . '../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 // Include Drupal core vendors.
 return require __DIR__ . '/vendor/autoload.php';
