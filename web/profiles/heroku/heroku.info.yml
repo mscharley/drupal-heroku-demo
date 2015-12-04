@@ -1,0 +1,19 @@
+name: Drupal@Heroku
+type: profile
+description: 'Drupal optimised for running on Heroku'
+core: 8.x
+
+distribution:
+  name: Drupal@Heroku
+
+# Borrowed from the minimal profile.
+dependencies:
+  - node
+  - block
+#  - dblog
+# We use monolog for watchdog instead of dblog.
+#  - monolog
+  - page_cache
+  - dynamic_page_cache
+themes:
+  - stark
