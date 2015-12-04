@@ -17,6 +17,11 @@ function heroku_form_install_settings_form_alter(&$form, &$form_state) {
     'DATABASE_URL',
   ];
 
+  $scheme_mapping = [
+    'postgres' => 'pgsql',
+    'mysql2' => 'mysql',
+  ];
+
   $dbconn = NULL;
   $detected_var = '';
   $configured = FALSE;
@@ -30,7 +35,7 @@ function heroku_form_install_settings_form_alter(&$form, &$form_state) {
 
   if ($dbconn) {
     $db_url = parse_url($dbconn);
-    $driver = $db_url['scheme'];
+    $driver = empty($scheme_mapping[$db_url['scheme']]) ? $db_url['scheme'] : $scheme_mapping[$db_url['scheme']];
     $args = [
       '@var' => $detected_var,
       '@driver' => $driver,
