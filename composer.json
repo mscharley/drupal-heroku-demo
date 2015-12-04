@@ -19,8 +19,7 @@
     "ext-SPL": "*",
     "ext-tokenizer": "*",
     "ext-xml": "*",
-    "drush/drush": "@stable",
-    "monolog/monolog": "~1.7"
+    "drush/drush": "@stable"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
