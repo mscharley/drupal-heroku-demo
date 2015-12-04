@@ -1,0 +1,5 @@
+monolog.profile_add:
+  route_name: monolog.profile_add
+  title: 'Add profile'
+  appears_on:
+    - 'monolog.profile_list'

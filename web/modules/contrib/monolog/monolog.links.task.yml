@@ -1,0 +1,22 @@
+monolog.channel_settings:
+  title: 'Channels'
+  route_name: monolog.channel_settings
+  base_route: monolog.channel_settings
+monolog.profile_list:
+  title: 'Profiles'
+  route_name: monolog.profile_list
+  base_route: monolog.channel_settings
+monolog_logging.admin_settings:
+  title: 'Settings'
+  route_name: monolog.admin_settings
+  base_route: monolog.channel_settings
+  
+entity.monolog_profile.edit_form:
+  route_name: entity.monolog_profile.edit_form
+  base_route: entity.monolog_profile.edit_form
+  title: 'Configure'
+entity.monolog_profile.delete_form:
+  route_name: entity.monolog_profile.delete_form
+  base_route: entity.monolog_profile.edit_form
+  title: 'Delete'
+  weight: 10

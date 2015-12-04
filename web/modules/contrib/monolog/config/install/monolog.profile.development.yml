@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+name: development
+label: Development
+handlers:
+  34722c97-ccc3-4a8d-9600-d9ee9438be7c:
+    uuid: 34722c97-ccc3-4a8d-9600-d9ee9438be7c
+    id: stream
+    data:
+      label: 'Log file'
+      weight: -50
+      level: 200
+      bubble: 1
+      filepath: 'public://monolog/drupal.log'

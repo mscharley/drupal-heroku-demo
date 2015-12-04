@@ -1,0 +1,42 @@
+# Schema for the configuration files of the monolog module.
+
+monolog.settings:
+  type: mapping
+  label: 'Monolog settings'
+  mapping:
+    channel_profiles:
+      label: 'Channel profiles'
+      type: sequence
+      sequence:
+        - type: string
+    logging_contexts:
+      label: 'Contexts'
+      type: sequence
+      sequence:
+        - type: string
+    type_as_channel:
+      label: 'Type as channel'
+      type: integer
+
+monolog.profile.*:
+  type: config_entity
+  label: 'Monolog profile'
+  mapping:
+    name:
+      type: string
+    label:
+      type: label
+      label: 'Label'
+    handlers:
+      type: sequence
+      sequence:
+        - type: mapping
+          mapping:
+            id:
+              type: string
+            data:
+              type: monolog.handler.[%parent.id]
+            weight:
+              type: integer
+            uuid:
+              type: string

@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * @file
+ * A Framework and UI for integrating with the Monolog library.
+ */
+
+/**
+ * Implements hook_hook_info().
+ */
+function monolog_hook_info() {
+  return array(
+    'monolog_channel_info' => array(
+      'group' => 'monolog',
+    ),
+  );
+}
+
+/**
+ * @defgroup monolog_invokers Monolog Hook Invoker Functions
+ * @{
+ * Functions that load information contained in hook implementations.
+ */
+
+/**
+ * Loads all channel definitions from hook_monolog_channel_info()
+ * implementations.
+ *
+ * @return array
+ */
+function monolog_channel_info_load_all() {
+  $channels = &drupal_static(__FUNCTION__);
+  if (!$channels) {
+    $module_handler = \Drupal::moduleHandler();
+    $channels = $module_handler->invokeAll('monolog_channel_info');
+    $module_handler->alter('monolog_channel_info', $channels);
+  }
+  return $channels;
+}
+
+/**
+ * Returns a single channel definition by its unique name.
+ *
+ * @param string $name
+ *   The unique identifier of the channel.
+ *
+ * @see monolog_channel_load_all()
+ */
+function monolog_channel_info_load($name) {
+  $channels = monolog_channel_info_load_all();
+  return isset($channels[$name]) ? $channels[$name] : FALSE;
+}
+
+/**
+ * @} End of "defgroup monolog_invokers".
+ */
+
+
+/**
+ * Implements hook_monolog_channel_info().
+ */
+function monolog_monolog_channel_info() {
+  $channels = array();
+
+  $channels['content'] = array(
+    'label' => t('Content'),
+    'default profile' => 'production',
+  );
+  $channels['php'] = array(
+    'label' => t('PHP'),
+    'default profile' => 'development',
+  );
+
+  // @todo Figure this out..Register all core channels here? Plugins are
+  // probably an overkill.
+
+  return $channels;
+}
+
+/**
+ * Helper function that prepares a directory for logging.
+ *
+ * @param string $directory
+ *   The URI to the directory containing the log files.
+ *
+ * @throws \InvalidArgumentException
+ */
+function monolog_prepare_log_dir($directory) {
+  if (!file_prepare_directory($directory, FILE_CREATE_DIRECTORY)) {
+    throw new \InvalidArgumentException(t('Error creating directory: @dir', array('@dir' => $directory)));
+  }
+  if (0 === strpos($directory, 'public://')) {
+    file_save_htaccess($directory, TRUE);
+  }
+}
+
+/**
+ * Returns a unique identifier for the page request or PHP process.
+ *
+ * @return string
+ */
+function monolog_request_id() {
+  static $request_id = FALSE;
+  if (!$request_id) {
+    $request_id = uniqid();
+  }
+  return $request_id;
+}
