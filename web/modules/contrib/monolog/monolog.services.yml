@@ -1,4 +1,0 @@
-services:
-  plugin.manager.monolog.handler:
-    class: Drupal\monolog\MonologHandlerManager
-    parent: default_plugin_manager

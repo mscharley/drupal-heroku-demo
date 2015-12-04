@@ -1,5 +1,0 @@
-monolog.channel_settings:
-  title: 'Monolog'
-  description: 'Configure Monolog channels and profiles.'
-  route_name: monolog.channel_settings
-  parent: system.admin_config_development

@@ -1,8 +1,0 @@
-channel_profiles: []
-type_as_channel: 1
-logging_contexts:
-  uid: 'uid'
-  request_uri: 'request_uri'
-  referer: 'referer'
-  ip: 'ip'
-  link: 'link'
