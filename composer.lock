@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3fda995a9e7903f810089d7d231ee8bc",
-    "content-hash": "466c825bf4187af2a7f11374efba0ade",
+    "hash": "50e50065f9e3b68d02bd1dbcf40ee71b",
+    "content-hash": "2061dd5d2cc609941df5854354a5d27e",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -802,6 +802,7 @@
         "ext-hash": "*",
         "ext-imagick": "*",
         "ext-json": "*",
+        "ext-mbstring": "*",
         "ext-mysql": "*",
         "ext-pcre": "*",
         "ext-pdo": "*",

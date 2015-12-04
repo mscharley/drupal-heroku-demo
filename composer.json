@@ -8,6 +8,7 @@
     "ext-hash": "*",
     "ext-imagick": "*",
     "ext-json": "*",
+    "ext-mbstring": "*",
     "ext-mysql": "*",
     "ext-pcre": "*",
     "ext-pdo": "*",
