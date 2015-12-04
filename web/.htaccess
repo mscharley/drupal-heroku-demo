@@ -69,6 +69,20 @@ AddEncoding gzip svgz
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  # Migrate Heroku's X-Forwarded headers to the trusted places that Drupal checks
+  # for them. We do this here because the installer can't run with a settings file
+  # in place and we can't override the settings from the profile as a full
+  # bootstrap has already occured at that point.
+  RewriteCond %{REMOTE_ADDR} ^10\.
+  RewriteRule ^ - [E=REMOTE_ADDR:%{HTTP:X-Forwarded-For}]
+  RewriteCond %{REMOTE_ADDR} ^10\.
+  RewriteRule ^ - [E=REMOTE_PORT:%{HTTP:X-Forwarded-Port}]
+  RewriteCond %{REMOTE_ADDR} ^10\.
+  RewriteRule ^ - [E=REQUEST_SCHEME:%{HTTP:X-Forwarded-Proto}]
+  RewriteCond %{REMOTE_ADDR} ^10\.
+  RewriteCond %{HTTP_X_FORWARDED_PROTO} ^https$
+  RewriteRule ^ - [E=HTTPS:on]
+
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
