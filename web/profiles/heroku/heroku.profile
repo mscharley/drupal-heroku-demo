@@ -63,6 +63,9 @@ function heroku_form_install_settings_form_alter(&$form, &$form_state) {
   }
 
   if (!$configured) {
+    if (getenv('DYNO')) {
+      drupal_set_message(t('Couldn\'t find any database settings. Defaulting to SQLite. This is fine for a testing environment but won\'t suffice for production.'), 'warning');
+    }
     // If we don't have a valid connection string available then default to SQLite, which is good enough for local dev
     // or a free instance.
     $form['driver']['#default_value'] = 'sqlite';
