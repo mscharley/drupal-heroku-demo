@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0623861c8a680eaa2ad662fdd848b1d0",
-    "content-hash": "c670fcbdf3d25347eb2d126f3d7e9882",
+    "hash": "b740e4be87304365a68ea72812140132",
+    "content-hash": "e59013593a2c9b52c23a76eab82c802d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1023,8 +1023,8 @@
                 },
                 "patches_applied": {
                     "[2161997] Remove dependency on composer_manager": "patches/D8-monolog-remove_composer_manager-2161997-7.patch",
-                    "[] Ensure monolog folder exists on install": "patches/require-folder.patch",
-                    "[] Fix premature cast to string": "patches/fix-premature-cast-to-string.patch"
+                    "[2629324] Ensure monolog folder exists on install": "patches/require_folder-2629324-2.patch",
+                    "[2629326] Fix premature cast to string": "patches/fix_premature_cast_to_string-2629326-2.patch"
                 }
             },
             "autoload": {
