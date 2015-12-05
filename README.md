@@ -1,22 +1,35 @@
-# php-getting-started
+# drupal-heroku-demo
 
-A barebones PHP app that makes use of the [Silex](http://silex.sensiolabs.org/) web framework, which can easily be deployed to Heroku.
+A barebones Drupal 8 installation that falls somewhere between the core `minimal` and `standard` installation profiles,
+which can easily be deployed to Heroku.
 
-This application supports the [Getting Started with PHP on Heroku](https://devcenter.heroku.com/articles/getting-started-with-php) article - check it out.
+## Installation
+
+```sh
+$ git clone git@github.com:mscharley/drupal-heroku-demo
+$ cd drupal-heroku-demo
+$ composer install
+```
 
 ## Deploying
 
 Install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
 
 ```sh
-$ git clone git@github.com:heroku/php-getting-started.git # or clone your own fork
-$ cd php-getting-started
 $ heroku create
+$ heroku addons:create jawsdb:kitefin
 $ git push heroku master
 $ heroku open
 ```
 
+You can also use a SQLite database if you wish for testing purposes but be aware that this database won't last through
+a Heroku dyno restart which notably happens whenever you push code to Heroku as well as roughly every 24 hours.
+
 ## Documentation
+
+For more information about the installation profile, see the Drupal project:
+
+- [Drupal@Heroku](https://www.drupal.org/sandbox/mscharley/2629336)
 
 For more information about using PHP on Heroku, see these Dev Center articles:
 
