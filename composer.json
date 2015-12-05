@@ -12,16 +12,18 @@
         {
             "type": "composer",
             "url": "https://packagist.drupal-composer.org"
+        },
+        {
+            "type": "vcs",
+            "url": "http://git.drupal.org/sandbox/mscharley/2629336.git"
         }
     ],
     "require": {
         "php": "~5.6",
-        "ext-gd": "*",
-        "ext-imagick": "*",
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "~8.0",
-        "drupal/monolog": "~8.1",
+        "drupal/heroku": "dev-8.x-1.x",
         "drush/drush": "@stable",
         "drupal/console": "dev-master"
     },
@@ -44,12 +46,6 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
-        "patches": {
-            "drupal/monolog": {
-                "[2161997] Remove dependency on composer_manager": "patches/D8-monolog-remove_composer_manager-2161997-7.patch",
-                "[2629324] Ensure monolog folder exists on install": "patches/require_folder-2629324-2.patch",
-                "[2629326] Fix premature cast to string": "patches/fix_premature_cast_to_string-2629326-2.patch"
-            }
-        }
+        "patches": {}
     }
 }
