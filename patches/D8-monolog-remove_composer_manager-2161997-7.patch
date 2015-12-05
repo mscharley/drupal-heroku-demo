@@ -1,0 +1,13 @@
+diff --git a/monolog.info.yml b/monolog.info.yml
+--- a/monolog.info.yml
++++ b/monolog.info.yml
+@@ -1,7 +1,6 @@
+ type: module
+ name: Monolog
+ description: A Framework and UI for integrating with the Monolog library.
+-dependencies:
+-  - composer_manager
++dependencies: []
+ core: 8.x
+ package: Development
+ configure: monolog.channel_settings

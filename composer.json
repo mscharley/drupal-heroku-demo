@@ -43,6 +43,13 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/monolog": {
+                "[2161997] Remove dependency on composer_manager": "patches/D8-monolog-remove_composer_manager-2161997-7.patch",
+                "[] Ensure monolog folder exists on install": "patches/require-folder.patch",
+                "[] Fix premature cast to string": "patches/fix-premature-cast-to-string.patch"
+            }
         }
     }
 }

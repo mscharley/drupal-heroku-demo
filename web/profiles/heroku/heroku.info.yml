@@ -6,13 +6,13 @@ core: 8.x
 distribution:
   name: Drupal@Heroku
 
-# Borrowed from the minimal profile.
 dependencies:
   - node
   - block
 # We use monolog for watchdog instead of dblog.
-#  - monolog
+  - monolog
   - page_cache
   - dynamic_page_cache
 themes:
-  - stark
+  - bartik
+  - seven

@@ -1,0 +1,14 @@
+diff --git a/monolog.install b/monolog.install
+--- a/monolog.install
++++ b/monolog.install
+@@ -22,3 +22,10 @@
+ 
+   return $requirements;
+ }
++
++/**
++ * Implements hook_install().
++ */
++function monolog_install() {
++  monolog_prepare_log_dir('public://monolog/');
++}
