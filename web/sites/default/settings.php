@@ -219,7 +219,7 @@ require_once DRUPAL_ROOT . '/profiles/contrib/heroku/heroku.settings.inc';
  *   );
  * @endcode
  */
-$databases['default']['default'] = array_shift(heroku_database_settings());
+$databases = heroku_database_settings();
 
 /**
  * Location of the site configuration files.
@@ -714,3 +714,4 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
+$settings['install_profile'] = 'heroku';
