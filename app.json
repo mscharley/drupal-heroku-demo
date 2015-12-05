@@ -1,6 +1,6 @@
 {
-  "name": "PHP Getting Started",
-  "description": "A barebones PHP app that makes use of the Silex web framework",
-  "repository": "https://github.com/heroku/php-getting-started",
+  "name": "Drupal@Heroku Demo",
+  "description": "Demo application showing off the Drupal@Heroku project.",
+  "repository": "https://github.com/mscharley/drupal-heroku-demo",
   "addons": []
 }
