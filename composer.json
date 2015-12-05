@@ -1,11 +1,10 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "name": "mscharley/heroku-drupal-demo",
+    "description": "Project template for Drupal 8 projects with composer hosted on Heroku",
     "type": "project",
-    "license": "GPL-2.0+",
     "authors": [
         {
-            "name": "",
+            "name": "Matthew Scharley",
             "role": ""
         }
     ],
@@ -16,10 +15,13 @@
         }
     ],
     "require": {
+        "php": "~5.6",
+        "ext-twig": "*",
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "~1.0",
-        "drupal/core": "8.0.*",
-        "drush/drush": "dev-master",
+        "drupal/core": "~8.0",
+        "drupal/monolog": "~8.1",
+        "drush/drush": "@stable",
         "drupal/console": "dev-master"
     },
     "require-dev": {
@@ -33,9 +35,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "scripts": {
-        "post-install-cmd": "sh ./scripts/composer/post-install.sh"
-    },
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],

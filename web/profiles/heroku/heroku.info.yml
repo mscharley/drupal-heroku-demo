@@ -10,9 +10,8 @@ distribution:
 dependencies:
   - node
   - block
-#  - dblog
 # We use monolog for watchdog instead of dblog.
-  - monolog
+#  - monolog
   - page_cache
   - dynamic_page_cache
 themes:

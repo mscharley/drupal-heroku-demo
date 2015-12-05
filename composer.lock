@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "aa05de817fde9ec9d00be13b88e07285",
-    "content-hash": "14fe355e54525ae5c6c80a1c99d1b6f7",
+    "hash": "313fe6595dabfeb8922a365aa09318eb",
+    "content-hash": "5ae38343da355618a8e80f90821db62f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -705,17 +705,55 @@
             "time": "2014-09-09 13:34:57"
         },
         {
+            "name": "drupal/composer_manager",
+            "version": "8.1.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/composer_manager",
+                "reference": "afeb58ca20efeec8206924c7a9429e1cb9295367"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/composer_manager-8.x-1.0-rc1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "http://drupal.org/node/1929436/committers",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Allows contributed modules to require external libraries via Composer.",
+            "homepage": "http://drupal.org/project/composer_manager",
+            "time": "2015-10-18 20:32:10"
+        },
+        {
             "name": "drupal/console",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hechoendrupal/DrupalConsole.git",
-                "reference": "115c784ded47680d5062c24f162833d6ed8ceb37"
+                "reference": "86b1d676533b6b9e127ea953ebed5a704614b74b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hechoendrupal/DrupalConsole/zipball/115c784ded47680d5062c24f162833d6ed8ceb37",
-                "reference": "115c784ded47680d5062c24f162833d6ed8ceb37",
+                "url": "https://api.github.com/repos/hechoendrupal/DrupalConsole/zipball/86b1d676533b6b9e127ea953ebed5a704614b74b",
+                "reference": "86b1d676533b6b9e127ea953ebed5a704614b74b",
                 "shasum": ""
             },
             "require": {
@@ -786,7 +824,7 @@
                 "drupal",
                 "symfony"
             ],
-            "time": "2015-12-04 22:38:13"
+            "time": "2015-12-05 00:07:10"
         },
         {
             "name": "drupal/core",
@@ -954,29 +992,84 @@
             "time": "2015-12-02 14:08:29"
         },
         {
-            "name": "drush/drush",
-            "version": "dev-master",
+            "name": "drupal/monolog",
+            "version": "dev-8.x-1.x",
             "source": {
                 "type": "git",
-                "url": "https://github.com/drush-ops/drush.git",
-                "reference": "9c06a8f49a96bc45a4f2e609d2a566eac69428f2"
+                "url": "http://git.drupal.org/project/monolog",
+                "reference": "84cdb36eef1e1f0afe6237fc50af8980ae2675da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/9c06a8f49a96bc45a4f2e609d2a566eac69428f2",
-                "reference": "9c06a8f49a96bc45a4f2e609d2a566eac69428f2",
+                "url": "http://ftp.drupal.org/files/projects/monolog-8.x-1.x-dev.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/composer_manager": "8.*",
+                "drupal/core": "8.*",
+                "monolog/monolog": ">=1.6.0,<2.0.0"
+            },
+            "replace": {
+                "drupal/monolog_gelf": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/monolog_gelf"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Drupal\\Monolog": "src/"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Pliakas",
+                    "email": "opensource@chrispliakas.com",
+                    "role": "Project Lead"
+                },
+                {
+                    "name": "See contributors",
+                    "homepage": "http://drupal.org/node/1937716/committers",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Framework and UI for integrating with the Monolog library.",
+            "homepage": "http://drupal.org/project/monolog",
+            "time": "2015-06-15 20:00:34"
+        },
+        {
+            "name": "drush/drush",
+            "version": "8.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drush-ops/drush.git",
+                "reference": "e03a3ef04f559f7ec00df637b4035e09c9cf389e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/e03a3ef04f559f7ec00df637b4035e09c9cf389e",
+                "reference": "e03a3ef04f559f7ec00df637b4035e09c9cf389e",
                 "shasum": ""
             },
             "require": {
                 "pear/console_table": "~1.2.0",
                 "php": ">=5.4.5",
-                "psr/log": "~1.0",
                 "psy/psysh": "~0.6",
                 "symfony/var-dumper": "^2.6.3",
                 "symfony/yaml": "2.7.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*",
+                "phpunit/phpunit": ">=3.5",
                 "symfony/process": "2.7.*"
             },
             "suggest": {
@@ -1049,7 +1142,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2015-12-03 19:49:41"
+            "time": "2015-11-29 00:43:35"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -1583,6 +1676,83 @@
                 "xml"
             ],
             "time": "2015-06-07 08:43:18"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.17.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
+                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "raven/raven": "^0.13",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "swiftmailer/swiftmailer": "~5.3",
+                "videlalvaro/php-amqplib": "~2.4"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "raven/raven": "Allow sending log messages to a Sentry server",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "videlalvaro/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.16.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2015-10-14 12:51:02"
         },
         {
             "name": "nikic/php-parser",
@@ -5146,7 +5316,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drush/drush": 20,
+        "drush/drush": 0,
         "drupal/console": 20,
         "jcalderonzumba/gastonjs": 20,
         "jcalderonzumba/mink-phantomjs-driver": 20
