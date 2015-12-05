@@ -219,7 +219,7 @@ require_once DRUPAL_ROOT . '/profiles/contrib/heroku/heroku.settings.inc';
  *   );
  * @endcode
  */
-$databases['default']['default'] = reset(heroku_database_settings());
+$databases['default']['default'] = array_shift(heroku_database_settings());
 
 /**
  * Location of the site configuration files.

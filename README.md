@@ -19,7 +19,7 @@ Install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
 $ heroku create
 $ heroku addons:create jawsdb:kitefin
 $ git push heroku master
-$ heroku open
+$ heroku open core/install.php
 ```
 
 You can also use a SQLite database if you wish for testing purposes but be aware that this database won't last through
