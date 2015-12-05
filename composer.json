@@ -28,6 +28,7 @@
         "drupal/console": "dev-master"
     },
     "require-dev": {
+        "heroku/heroku-buildpack-php": "*",
         "behat/mink": "~1.6",
         "behat/mink-goutte-driver": "~1.2",
         "jcalderonzumba/gastonjs": "^1.1@dev",
