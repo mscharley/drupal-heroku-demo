@@ -8,6 +8,6 @@ diff --git a/monolog.info.yml b/monolog.info.yml
 -dependencies:
 -  - composer_manager
 +dependencies: []
- core: 8.x
+ # core: 8.x
  package: Development
  configure: monolog.channel_settings
