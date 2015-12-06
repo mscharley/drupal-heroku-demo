@@ -17,7 +17,7 @@ Install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
 
 ```sh
 $ heroku create
-$ heroku addons:create jawsdb:kitefin
+$ heroku addons:create heroku-postgresql:hobby-dev
 $ git push heroku master
 $ heroku open core/install.php
 ```
