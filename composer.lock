@@ -959,7 +959,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/sandbox/mscharley/2629336.git",
-                "reference": "07ad727f49254d7c4d70022cd3d4f6773d7c2b5c"
+                "reference": "8baf36dd672daa1495354971f94c364498892aa7"
             },
             "require": {
                 "composer/installers": "^1.0.20",
@@ -1007,7 +1007,7 @@
             "support": {
                 "issues": "http://drupal.org/project/issues/2629336"
             },
-            "time": "2015-12-06 04:37:12"
+            "time": "2015-12-06 04:46:44"
         },
         {
             "name": "drush/drush",
