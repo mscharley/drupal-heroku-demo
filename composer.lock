@@ -959,12 +959,15 @@
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/sandbox/mscharley/2629336.git",
-                "reference": "4c80a446a37ee9610cd7736aa25c7dbcd98b49ee"
+                "reference": "fb485655d38f5f9c47c0b91176174b78f8653132"
             },
             "require": {
                 "composer/installers": "^1.0.20",
                 "ext-gd": "*",
                 "ext-imagick": "*",
+                "ext-pdo_mysql": "*",
+                "ext-pdo_pgsql": "*",
+                "ext-pdo_sqlite": "*",
                 "monolog/monolog": "~1.6"
             },
             "conflict": {
@@ -1004,7 +1007,7 @@
             "support": {
                 "issues": "http://drupal.org/project/issues/2629336"
             },
-            "time": "2015-12-06 01:57:52"
+            "time": "2015-12-06 02:11:34"
         },
         {
             "name": "drush/drush",
