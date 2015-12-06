@@ -710,12 +710,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hechoendrupal/DrupalConsole.git",
-                "reference": "c8c44aa7c535b796fd8ab4afdc36baf3fbf4f55f"
+                "reference": "ffada33230db0435475ec058ca395bf84a5f3121"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hechoendrupal/DrupalConsole/zipball/c8c44aa7c535b796fd8ab4afdc36baf3fbf4f55f",
-                "reference": "c8c44aa7c535b796fd8ab4afdc36baf3fbf4f55f",
+                "url": "https://api.github.com/repos/hechoendrupal/DrupalConsole/zipball/ffada33230db0435475ec058ca395bf84a5f3121",
+                "reference": "ffada33230db0435475ec058ca395bf84a5f3121",
                 "shasum": ""
             },
             "require": {
@@ -786,7 +786,7 @@
                 "drupal",
                 "symfony"
             ],
-            "time": "2015-12-05 20:53:14"
+            "time": "2015-12-06 03:37:14"
         },
         {
             "name": "drupal/core",
@@ -959,7 +959,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/sandbox/mscharley/2629336.git",
-                "reference": "fb485655d38f5f9c47c0b91176174b78f8653132"
+                "reference": "07ad727f49254d7c4d70022cd3d4f6773d7c2b5c"
             },
             "require": {
                 "composer/installers": "^1.0.20",
@@ -1007,7 +1007,7 @@
             "support": {
                 "issues": "http://drupal.org/project/issues/2629336"
             },
-            "time": "2015-12-06 02:11:34"
+            "time": "2015-12-06 04:37:12"
         },
         {
             "name": "drush/drush",

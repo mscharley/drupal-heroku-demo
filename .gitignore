@@ -16,7 +16,6 @@
 # Ignore paths that contain user-generated content.
 /web/sites/*/files/**
 /web/sites/*/private/**
-!/web/sites/default/files/config_X6eQXd1Zzt7yt25QLHoAd24BXi5NkrBG6KXZ0UlmQVggyGnXYinfKnhUa4Okssaev8c2Yxj2Lg
 
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest
