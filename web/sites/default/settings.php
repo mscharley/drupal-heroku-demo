@@ -56,8 +56,6 @@
  * implementations with custom ones.
  */
 
-require_once DRUPAL_ROOT . '/profiles/contrib/heroku/heroku.settings.inc';
-
 /**
  * Database settings:
  *
@@ -219,7 +217,7 @@ require_once DRUPAL_ROOT . '/profiles/contrib/heroku/heroku.settings.inc';
  *   );
  * @endcode
  */
-$databases = heroku_database_settings();
+$databases = array();
 
 /**
  * Location of the site configuration files.
@@ -246,7 +244,7 @@ $databases = heroku_database_settings();
  *   );
  * @endcode
  */
-$config_directories['sync'] = 'sites/default/files/config_X6eQXd1Zzt7yt25QLHoAd24BXi5NkrBG6KXZ0UlmQVggyGnXYinfKnhUa4Okssaev8c2Yxj2Lg/sync';
+$config_directories = array();
 
 /**
  * Settings:
@@ -268,7 +266,7 @@ $config_directories['sync'] = 'sites/default/files/config_X6eQXd1Zzt7yt25QLHoAd2
  *
  * @see install_select_profile()
  */
-# $settings['install_profile'] = '';
+$settings['install_profile'] = 'heroku';
 
 /**
  * Salt for one-time login links, cancel links, form tokens, etc.
@@ -287,7 +285,7 @@ $config_directories['sync'] = 'sites/default/files/config_X6eQXd1Zzt7yt25QLHoAd2
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '76SIHGVWpwdT0U6dP8omkSAN5YbbtOBPHc2rG26xqYv9H-rV8OMirpPuncF-iGtIWMfDtdUaAg';
+$settings['hash_salt'] = '';
 
 /**
  * Deployment identifier.
@@ -471,7 +469,7 @@ if ($settings['hash_salt']) {
  *
  * Remove the leading hash signs to disable.
  */
-# $settings['allow_authorize_operations'] = FALSE;
+$settings['allow_authorize_operations'] = FALSE;
 
 /**
  * Default mode for directories and files written by Drupal.
@@ -714,4 +712,5 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
-$settings['install_profile'] = 'heroku';
+
+require DRUPAL_ROOT . '/profiles/contrib/heroku/heroku.settings.inc';

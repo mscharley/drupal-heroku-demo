@@ -786,12 +786,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hechoendrupal/DrupalConsole.git",
-                "reference": "ffada33230db0435475ec058ca395bf84a5f3121"
+                "reference": "b112169241f87ab1ee0a4a0041d8f6fb5fb5dfbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hechoendrupal/DrupalConsole/zipball/ffada33230db0435475ec058ca395bf84a5f3121",
-                "reference": "ffada33230db0435475ec058ca395bf84a5f3121",
+                "url": "https://api.github.com/repos/hechoendrupal/DrupalConsole/zipball/b112169241f87ab1ee0a4a0041d8f6fb5fb5dfbc",
+                "reference": "b112169241f87ab1ee0a4a0041d8f6fb5fb5dfbc",
                 "shasum": ""
             },
             "require": {
@@ -862,7 +862,7 @@
                 "drupal",
                 "symfony"
             ],
-            "time": "2015-12-06 03:37:14"
+            "time": "2015-12-06 18:13:46"
         },
         {
             "name": "drupal/core",
@@ -1035,7 +1035,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/sandbox/mscharley/2629336.git",
-                "reference": "aecaa1a474a9976e0ad605c96f1ceefa8ac10311"
+                "reference": "e2949984b524937b05b00ffe4fb90ace18ce74d1"
             },
             "require": {
                 "composer/installers": "^1.0.20",
@@ -1087,7 +1087,7 @@
             "support": {
                 "issues": "http://drupal.org/project/issues/2629336"
             },
-            "time": "2015-12-06 07:05:13"
+            "time": "2015-12-06 20:34:18"
         },
         {
             "name": "drupal/s3fs",
@@ -5120,28 +5120,28 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "863df9687835c62aa423a22412d26fa2ebde3fd3"
+                "reference": "2b0112e42c338afa9ad9dfeb94d66f6d84c2f828"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/863df9687835c62aa423a22412d26fa2ebde3fd3",
-                "reference": "863df9687835c62aa423a22412d26fa2ebde3fd3",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/2b0112e42c338afa9ad9dfeb94d66f6d84c2f828",
+                "reference": "2b0112e42c338afa9ad9dfeb94d66f6d84c2f828",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.2"
+                "phpunit/phpunit": "~5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -5164,11 +5164,11 @@
                 }
             ],
             "description": "Diff implementation",
-            "homepage": "http://www.github.com/sebastianbergmann/diff",
+            "homepage": "https://github.com/sebastianbergmann/diff",
             "keywords": [
                 "diff"
             ],
-            "time": "2015-02-22 15:13:53"
+            "time": "2015-12-06 07:21:36"
         },
         {
             "name": "sebastian/environment",
