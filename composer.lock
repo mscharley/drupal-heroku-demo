@@ -959,7 +959,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/sandbox/mscharley/2629336.git",
-                "reference": "4ce281659d1fb6a037798ba6aa3af4575e4b2013"
+                "reference": "7aa902e1b049d64826e1b172626f1b90709b320f"
             },
             "require": {
                 "composer/installers": "^1.0.20",
@@ -984,11 +984,6 @@
                     ]
                 }
             },
-            "autoload": {
-                "psr-4": {
-                    "Drupal\\heroku\\": "src/"
-                }
-            },
             "license": [
                 "GPL-2.0"
             ],
@@ -1009,7 +1004,7 @@
             "support": {
                 "issues": "http://drupal.org/project/issues/2629336"
             },
-            "time": "2015-12-06 00:06:15"
+            "time": "2015-12-06 00:21:01"
         },
         {
             "name": "drush/drush",
